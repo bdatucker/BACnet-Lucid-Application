@@ -1,0 +1,52 @@
+﻿<Window x:Class="BACnet_Lucid_Application.View.PointWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BACnet_Lucid_Application.View"
+        mc:Ignorable="d"
+        Title="PointWindow" Height="450" Width="300">
+    <DockPanel Margin="10">
+        <WrapPanel DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+            <Button Click="Save_Button_Click">Save</Button>
+            <Button Click="Cancel_Button_Click">Cancel</Button>
+        </WrapPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label HorizontalAlignment="Right" Margin="5" Grid.Row="0" Grid.Column="0">Status:</Label>
+            <Label HorizontalAlignment="Right" Margin="5" Grid.Row="1" Grid.Column="0">BACnet IP:</Label>
+            <Label HorizontalAlignment="Right" Margin="5" Grid.Row="2" Grid.Column="0">BACnet Device:</Label>
+            <Label HorizontalAlignment="Right" Margin="5" Grid.Row="3" Grid.Column="0">BACnet Name:</Label>
+            <Label HorizontalAlignment="Right" Margin="5" Grid.Row="4" Grid.Column="0">BACnet ID:</Label>
+            <Label HorizontalAlignment="Right" Margin="5" Grid.Row="5" Grid.Column="0">Lucid ID:</Label>
+            <Label HorizontalAlignment="Right" Margin="5" Grid.Row="6" Grid.Column="0">Last Updated:</Label>
+            <Label HorizontalAlignment="Right" Margin="5" Grid.Row="7" Grid.Column="0">Last Posted:</Label>
+            <Label HorizontalAlignment="Right" Margin="5" Grid.Row="8" Grid.Column="0">Update Interval:</Label>
+
+            <TextBox VerticalContentAlignment="Center" Margin="5" Grid.Row="0" Grid.Column="1" Text="{Binding Status}"/>
+            <TextBox VerticalContentAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="1" Text="{Binding BACnetIP}"/>
+            <TextBox VerticalContentAlignment="Center" Margin="5" Grid.Row="2" Grid.Column="1" Text="{Binding BACnetDevice}"/>
+            <TextBox VerticalContentAlignment="Center" Margin="5" Grid.Row="3" Grid.Column="1" Text="{Binding BACnetName}"/>
+            <TextBox VerticalContentAlignment="Center" Margin="5" Grid.Row="4" Grid.Column="1" Text="{Binding BACnetID}"/>
+            <TextBox VerticalContentAlignment="Center" Margin="5" Grid.Row="5" Grid.Column="1" Text="{Binding LucidID}"/>
+            <TextBox VerticalContentAlignment="Center" Margin="5" Grid.Row="6" Grid.Column="1" Text="{Binding LastUpdated}"/>
+            <TextBox VerticalContentAlignment="Center" Margin="5" Grid.Row="7" Grid.Column="1" Text="{Binding LastPosted}"/>
+            <TextBox VerticalContentAlignment="Center" Margin="5" Grid.Row="8" Grid.Column="1" Text="{Binding Interval}"/>
+        </Grid>
+    </DockPanel>
+    
+</Window>
